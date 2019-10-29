@@ -17,6 +17,7 @@ public class MyGridLayout extends GridLayout{
 
         Button myButton = new Button(context);
         myButton.setText("ADD NEW NOTE ");
+        myButton.setId(0);
 
         GridLayout.LayoutParams layoutParams = new GridLayout.LayoutParams();
         layoutParams.width = LayoutParams.MATCH_PARENT;

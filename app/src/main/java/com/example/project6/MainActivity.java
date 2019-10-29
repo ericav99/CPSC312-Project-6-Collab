@@ -25,6 +25,15 @@ public class MainActivity extends AppCompatActivity {
         MyGridLayout myGridLayout = new MyGridLayout(this);
         setContentView(myGridLayout);
 
+        Button button = (Button) findViewById(0);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, NoteActivity.class);
+                startActivity(intent);
+            }
+        });
         ListView listView = new ListView(this);
         //setContentView(listView);
         List<String> userString = new ArrayList<>();
@@ -36,15 +45,5 @@ public class MainActivity extends AppCompatActivity {
         listView.setAdapter(arrayAdapter);
     }
 
-    public void onButtonClick(View view){
-        Button button = (Button) view;
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                    Intent intent = new Intent(MainActivity.this, NoteActivity.class);
-                    startActivity(intent);
-                }
-        });
-    }
 
 }
