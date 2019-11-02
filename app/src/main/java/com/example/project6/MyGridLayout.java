@@ -11,7 +11,6 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 public class MyGridLayout extends GridLayout{
-
     public MyGridLayout(final Context context) {
         super(context);
 
